@@ -35,8 +35,13 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-gradient-hero" id="why-choose-us">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-hero relative overflow-hidden" id="why-choose-us">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
