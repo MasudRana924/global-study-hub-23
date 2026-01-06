@@ -12,11 +12,11 @@ const HeroBanner = () => {
   ];
 
   const floatingCountries = [
-    { name: "USA", top: "20%", left: "10%", delay: "0s" },
-    { name: "UK", top: "30%", right: "15%", delay: "1s" },
-    { name: "Canada", top: "60%", left: "5%", delay: "2s" },
-    { name: "Australia", bottom: "25%", right: "10%", delay: "0.5s" },
-    { name: "Germany", top: "15%", right: "30%", delay: "1.5s" },
+    { name: "USA", flag: "🇺🇸", top: "20%", left: "10%", delay: "0s" },
+    { name: "UK", flag: "🇬🇧", top: "30%", right: "15%", delay: "1s" },
+    { name: "Canada", flag: "🇨🇦", top: "60%", left: "5%", delay: "2s" },
+    { name: "Australia", flag: "🇦🇺", bottom: "25%", right: "10%", delay: "0.5s" },
+    { name: "Germany", flag: "🇩🇪", top: "15%", right: "30%", delay: "1.5s" },
   ];
 
   return (
@@ -34,7 +34,7 @@ const HeroBanner = () => {
         {floatingCountries.map((country, index) => (
           <div
             key={index}
-            className="absolute hidden md:flex items-center gap-1.5 px-3 py-1.5 bg-card/80 backdrop-blur-sm rounded-full border border-border/50 shadow-float animate-float-tag"
+            className="absolute hidden md:flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full border border-border/50 shadow-float animate-float-tag"
             style={{
               top: country.top,
               left: country.left,
@@ -43,8 +43,8 @@ const HeroBanner = () => {
               animationDelay: country.delay,
             }}
           >
-            <MapPin className="w-3.5 h-3.5 text-primary" />
-            <span className="text-xs font-medium text-foreground">{country.name}</span>
+            <span className="text-lg">{country.flag}</span>
+            <span className="text-sm font-medium text-foreground">{country.name}</span>
           </div>
         ))}
       </div>
