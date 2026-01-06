@@ -36,14 +36,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-background/80 backdrop-blur-lg text-foreground">
       {/* Newsletter Section */}
-      <div className="border-b border-primary-foreground/10">
+      <div className="border-b border-border/50">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
-              <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-              <p className="text-primary-foreground/70">
+              <h3 className="text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
+              <p className="text-muted-foreground">
                 Subscribe to get the latest news on universities, scholarships, and events
               </p>
             </div>
@@ -51,9 +51,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-l-lg text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary-foreground/40"
+                className="flex-1 px-4 py-3 bg-muted/50 border border-border rounded-l-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
               />
-              <Button className="rounded-l-none bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button className="rounded-l-none bg-primary hover:bg-primary/90 text-primary-foreground">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -68,27 +68,27 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary-foreground flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-logo">
+                <GraduationCap className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">
-                Edu<span className="text-accent">Global</span>
+              <span className="text-xl font-bold text-foreground">
+                Edu<span className="text-primary">Global</span>
               </span>
             </Link>
-            <p className="text-primary-foreground/70 mb-6 max-w-sm">
+            <p className="text-muted-foreground mb-6 max-w-sm">
               Your trusted partner for international education. Helping Bangladeshi students achieve their dreams of studying abroad since 2009.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-primary-foreground/70">
-                <MapPin className="w-5 h-5 text-accent" />
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <MapPin className="w-5 h-5 text-primary" />
                 <span>House 45, Road 12, Gulshan 1, Dhaka 1212</span>
               </div>
-              <div className="flex items-center gap-3 text-primary-foreground/70">
-                <Phone className="w-5 h-5 text-accent" />
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Phone className="w-5 h-5 text-primary" />
                 <span>+880 1700-000000</span>
               </div>
-              <div className="flex items-center gap-3 text-primary-foreground/70">
-                <Mail className="w-5 h-5 text-accent" />
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Mail className="w-5 h-5 text-primary" />
                 <span>info@eduglobal.com</span>
               </div>
             </div>
@@ -96,13 +96,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-5">Quick Links</h4>
+            <h4 className="font-semibold text-lg mb-5 text-foreground">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -113,13 +113,13 @@ const Footer = () => {
 
           {/* Destinations */}
           <div>
-            <h4 className="font-semibold text-lg mb-5">Destinations</h4>
+            <h4 className="font-semibold text-lg mb-5 text-foreground">Destinations</h4>
             <ul className="space-y-3">
               {destinations.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -130,13 +130,13 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold text-lg mb-5">Resources</h4>
+            <h4 className="font-semibold text-lg mb-5 text-foreground">Resources</h4>
             <ul className="space-y-3">
               {resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -148,10 +148,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-primary-foreground/10">
+      <div className="border-t border-border/50">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-primary-foreground/60 text-sm">
+            <p className="text-muted-foreground text-sm">
               © 2024 EduGlobal. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
@@ -159,7 +159,7 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                  className="w-9 h-9 rounded-full bg-muted/50 flex items-center justify-center hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />
