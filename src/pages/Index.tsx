@@ -5,6 +5,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Events from "@/components/Events";
 import StudentReviews from "@/components/StudentReviews";
 import Footer from "@/components/Footer";
+import ChatButton from "@/components/ChatButton";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Events />
       <StudentReviews />
       <Footer />
+      <ChatButton />
     </div>
   );
 };
