@@ -50,47 +50,46 @@ const Institutions = () => {
       <Header />
       
       {/* Hero Section - Unique Design */}
-      <section className="pt-24 pb-16 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-accent/80" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <section className="pt-24 pb-16 relative overflow-hidden bg-gradient-hero">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         
         {/* Floating Shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-primary-foreground/10 rounded-full blur-3xl animate-float-delayed" />
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-accent/30 rounded-full blur-2xl animate-float" />
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-10 right-10 w-48 h-48 bg-accent/10 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary/5 rounded-full blur-2xl animate-float" />
         
         {/* Country Icons floating */}
-        <div className="absolute top-28 right-[15%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/10 backdrop-blur-sm rounded-full border border-white/20 animate-float-tag">
+        <div className="absolute top-28 right-[15%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full shadow-float animate-float-tag">
           <span className="text-xl">🇺🇸</span>
-          <span className="text-primary-foreground/90 text-sm font-medium">USA</span>
+          <span className="text-foreground text-sm font-medium">USA</span>
         </div>
-        <div className="absolute top-40 left-[10%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/10 backdrop-blur-sm rounded-full border border-white/20 animate-float-tag animation-delay-200">
+        <div className="absolute top-40 left-[10%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full shadow-float animate-float-tag animation-delay-200">
           <span className="text-xl">🇬🇧</span>
-          <span className="text-primary-foreground/90 text-sm font-medium">UK</span>
+          <span className="text-foreground text-sm font-medium">UK</span>
         </div>
-        <div className="absolute bottom-24 right-[20%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/10 backdrop-blur-sm rounded-full border border-white/20 animate-float-tag animation-delay-400">
+        <div className="absolute bottom-24 right-[20%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full shadow-float animate-float-tag animation-delay-400">
           <span className="text-xl">🇨🇦</span>
-          <span className="text-primary-foreground/90 text-sm font-medium">Canada</span>
+          <span className="text-foreground text-sm font-medium">Canada</span>
         </div>
-        <div className="absolute bottom-32 left-[15%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/10 backdrop-blur-sm rounded-full border border-white/20 animate-float-tag animation-delay-600">
+        <div className="absolute bottom-32 left-[15%] hidden lg:flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full shadow-float animate-float-tag animation-delay-600">
           <span className="text-xl">🇦🇺</span>
-          <span className="text-primary-foreground/90 text-sm font-medium">Australia</span>
+          <span className="text-foreground text-sm font-medium">Australia</span>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+          {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full shadow-float mb-6">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-primary-foreground/90 text-sm font-medium">2000+ Universities Worldwide</span>
+              <span className="text-foreground text-sm font-medium">2000+ Universities Worldwide</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Explore World-Class
-              <span className="block mt-2 text-accent">Institutions</span>
+              <span className="block mt-2 text-gradient">Institutions</span>
             </h1>
-            <p className="text-primary-foreground/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               Discover top universities across 150+ countries. Your journey to global education starts here.
             </p>
             
@@ -115,33 +114,26 @@ const Institutions = () => {
             {/* Quick Stats */}
             <div className="flex flex-wrap justify-center gap-8 mt-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-foreground">2000+</div>
-                <div className="text-primary-foreground/70 text-sm">Universities</div>
+                <div className="text-3xl font-bold text-foreground">2000+</div>
+                <div className="text-muted-foreground text-sm">Universities</div>
               </div>
-              <div className="w-px h-12 bg-white/20 hidden sm:block" />
+              <div className="w-px h-12 bg-border hidden sm:block" />
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-foreground">150+</div>
-                <div className="text-primary-foreground/70 text-sm">Countries</div>
+                <div className="text-3xl font-bold text-foreground">150+</div>
+                <div className="text-muted-foreground text-sm">Countries</div>
               </div>
-              <div className="w-px h-12 bg-white/20 hidden sm:block" />
+              <div className="w-px h-12 bg-border hidden sm:block" />
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-foreground">50K+</div>
-                <div className="text-primary-foreground/70 text-sm">Programs</div>
+                <div className="text-3xl font-bold text-foreground">50K+</div>
+                <div className="text-muted-foreground text-sm">Programs</div>
               </div>
-              <div className="w-px h-12 bg-white/20 hidden sm:block" />
+              <div className="w-px h-12 bg-border hidden sm:block" />
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-foreground">100K+</div>
-                <div className="text-primary-foreground/70 text-sm">Students Placed</div>
+                <div className="text-3xl font-bold text-foreground">100K+</div>
+                <div className="text-muted-foreground text-sm">Students Placed</div>
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Wave Divider */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(var(--background))"/>
-          </svg>
         </div>
       </section>
 
